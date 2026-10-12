@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ポートフォリオサイト nook workroom">
+  <title>nook workroom | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <a class="logo" href="#top">nook workroom</a>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ファーストビュー：JavaScriptでページを自動でめくる -->
+    <section class="first-view" id="top">
+      <div class="book-stage desktop-book-stage">
+        <div class="book" id="portfolio-book">
+          <!-- ページをめくり終わったあとに表示される左ページ -->
+          <div class="book-left">
+            <p class="small-title">PORTFOLIO / 2026</p>
+            <div class="photo-space photo-main">
+              <img src="img/fv.webp" alt="">
+            </div>
+            <p class="page-number">01</p>
+          </div>
+
+          <!-- ページをめくり終わったあとに表示される右ページ -->
+          <div class="book-right">
+            <p class="brand-name">nook workroom</p>
+            <h1>伝わるように整え、<br>丁寧に形にする。</h1>
+            <div class="name-box">
+              <p class="name-label">PORTFOLIO BY</p>
+              <p class="name-ja">とみ</p>
+              <p class="name-en">TOMI</p>
+            </div>
+            <p class="first-message">
+              Web制作・資料制作・AI活用・業務サポートを通して、<br>
+              複雑な情報を分かりやすく整えます。
+            </p>
+            <a class="view-link" href="#works">VIEW MY WORKS</a>
+            <p class="page-number page-number-right">12</p>
+          </div>
+
+          <!-- 1枚目：COVER → INTRODUCTION -->
+          <div class="flip-sheet sheet-one">
+            <div class="page-face page-front cover-page">
+              <p class="flip-small">PERSONAL PORTFOLIO</p>
+              <p class="cover-brand">nook<br>workroom</p>
+              <span class="cover-line"></span>
+              <p class="cover-name">とみ｜TOMI</p>
+              <p class="flip-page-number">02</p>
+            </div>
+            <div class="page-face page-back introduction-page">
+              <p class="flip-small">01 / INTRODUCTION</p>
+              <p class="flip-title">相手に伝わることを考え、<br>情報を整理し、丁寧に形にする。</p>
+              <p class="flip-text">
+                看護の仕事を通して、正確に確認することや、必要な情報を整理して相手に分かりやすく伝えることを大切にしてきました。
+              </p>
+              <p class="flip-text">
+                これまでにRPAや生成AIなどを学び、現在はWeb制作を中心に学んでいます。<br>仕事で培った経験も生かしながら、できることを少しずつ広げています。                
+              </p>
+              <p class="flip-page-number">03</p>
+            </div>
+          </div>
+
+          <!-- 2枚目：ABOUT ME → MY STYLE -->
+          <div class="flip-sheet sheet-two">
+            <div class="page-face page-front about-page">
+              <p class="flip-small">02 / ABOUT ME</p>
+              <div class="mini-about">
+                <div class="mini-photo">
+                  <img src="img/about3.webp" alt="プロフィールイラスト">
+                </div>
+                <div class="mini-about-text">
+                  <p class="mini-name">とみ｜TOMI</p>
+                  <p>准看護師として長年勤務</p>
+                  <p>Web・資料制作・AI活用へ</p>
+                </div>
+              </div>
+              <p class="flip-title mini-heading">経験を、次の仕事へ。</p>
+              <p class="flip-page-number">04</p>
+            </div>
+            <div class="page-face page-back style-page">
+              <p class="flip-small">03 / MY STYLE</p>
+              <p class="flip-title mini-heading">考えて、整えて、確認する。</p>
+              <div class="mini-step-grid">
+                <p><span>01</span>UNDERSTAND<small>理解する</small></p>
+                <p><span>02</span>ORGANIZE<small>整理する</small></p>
+                <p><span>03</span>CREATE<small>形にする</small></p>
+                <p><span>04</span>CHECK<small>確認する</small></p>
+              </div>
+              <p class="flip-page-number">05</p>
+            </div>
+          </div>
+
+          <!-- 3枚目：WORKS → SKILLS -->
+          <div class="flip-sheet sheet-three">
+
+            <div class="page-face page-front works-page">
+              <p class="flip-small">04 / SELECTED WORKS</p>
+              <div class="mini-work-grid">               
+                  <div>
+                    <img src="img/cafenook.webp" alt="ブックカフェ NOOK. のWebサイト">
+                    <p>01 / NOOK.</p>
+                  </div>
+                  <div>
+                    <img src="img/hibikieyeclinic.webp" alt="ひびき眼科クリニックのWebサイト">
+                    <p>02 / ひびき眼科</p>
+                  </div>
+
+                  <div>
+                    <img src="img/scentory.webp" alt="アロマガイドサイト Scentory">
+                    <p>03 / Scentory</p>                 
+                  </div>
+              </div>
+              <p class="flip-page-number">06</p>
+            </div>
+
+            <div class="page-face page-back skills-page">
+              <p class="flip-small">05 / SKILLS</p>
+              <p class="flip-title mini-heading">できること・学んでいること</p>
+              <div class="mini-skill-grid">
+                <p>WEB<small>HTML / CSS / JavaScript</small></p>
+                <p>DESIGN<small>Adobe / Figma</small></p>
+                <p>OFFICE<small>Excel / PowerPoint</small></p>
+                <p>AI SUPPORT<small>情報・文章・資料整理</small></p>
+              </div>
+              <p class="flip-page-number">07</p>
+            </div>
+
+          </div>
+          <!-- 4枚目：EXPERIENCE → FUTURE -->
+          <div class="flip-sheet sheet-four">
+
+            <!-- 表：EXPERIENCE -->
+            <div class="page-face page-front other-page">
+              <p class="flip-small">06 / EXPERIENCE</p>
+              <p class="flip-title mini-heading">実務でしてきたこと</p>
+
+              <div class="mini-experience-grid">
+                <p>
+                  <span>01</span>
+                  DATA &amp; CHECK
+                  <small>データ入力・確認</small>
+                </p>
+
+                <p>
+                  <span>02</span>
+                  AI SUPPORT
+                  <small>生成AIを使った制作・確認</small>
+                </p>
+
+                <p>
+                  <span>03</span>
+                  OFFICE WORK
+                  <small>Excelを使った業務</small>
+                </p>
+              </div>
+
+              <p class="flip-page-number">08</p>
+            </div>
+
+            <!-- 裏：FUTURE -->
+            <div class="page-face page-back future-page">
+              <p class="flip-small">07 / FUTURE</p>
+              <p class="flip-title">できることを、<br>少しずつ広げる。</p>
+
+              <div class="mini-future-flow">
+                <span>Web制作</span>
+                <span>資料制作</span>
+                <span>AI活用</span>
+                <span>業務支援</span>
+              </div>
+
+              <p class="flip-text">
+                これまでの経験と、新しく学んだことを次の仕事へ。
+              </p>
+
+              <p class="flip-page-number">09</p>
+            </div>
+
+          </div>
+
+          <!-- 5枚目：CONTACT → 最後の写真ページ -->
+          <div class="flip-sheet sheet-five">
+            <div class="page-face page-front contact-page">
+              <p class="flip-small">08 / CONTACT</p>
+              <p class="contact-book-brand">nook workroom</p>
+              <p class="flip-title">Thank you<br>for reading.</p>
+              <p class="flip-text">とみ｜TOMI</p>
+              <p class="flip-page-number">10</p>
+            </div>
+            <div class="page-face page-back last-page">
+              <p class="flip-small">WELCOME TO MY PORTFOLIO</p>
+              <div class="last-photo">
+                <img src="img/fv2.webp" alt="">
+              </div>
+              
+              <p class="flip-page-number">11</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ページ操作ボタン -->
+        <div class="book-controls" aria-label="本のページ操作">
+          <button type="button" id="prev-button">戻る</button>
+          <button type="button" id="play-button">一時停止</button>
+          <button type="button" id="next-button">次へ</button>
+          <button type="button" id="replay-button">最初から</button>
+          <p class="book-status" id="book-status" aria-live="polite">1 / 6</p>
+        </div>
+      </div>
+
+      <!-- スマホ専用：縦長レポート用紙 -->
+      <div class="mobile-book-stage">
+
+        <div class="mobile-paper" id="mobile-paper">
+
+          <div class="mobile-page">
+            <p class="mobile-small">01 / COVER</p>
+            <p class="mobile-cover-brand">nook<br>workroom</p>
+            <span class="mobile-cover-line"></span>
+            <p class="mobile-cover-name">とみ｜TOMI</p>
+            <p class="mobile-page-number">01</p>
+          </div>
+
+          <div class="mobile-page">
+            <p class="mobile-small">02 / INTRODUCTION</p>
+            <p class="mobile-title">
+              相手に伝わることを考え、<br>
+              情報を整理し、丁寧に形にする。
+            </p>
+            <p class="mobile-text">
+             看護の仕事を通して、正確に確認することや、必要な情報を整理して相手に分かりやすく伝えることを大切にしてきました。
+           </p>
+            <p class="mobile-text">
+             これまでにRPAや生成AIなどを学び、現在はWeb制作を中心に学んでいます。<br>仕事で培った経験も生かしながら、できることを少しずつ広げています。
+            </p>
+            <p class="mobile-page-number">02</p>
+          </div>
+          <div class="mobile-page">
+            <p class="mobile-small">03 / ABOUT ME</p>
+            <div class="mobile-photo">
+              <img src="img/about3.webp" alt="プロフィールイラスト">
+            </div>
+            <p class="mobile-name">とみ｜TOMI</p>
+            <p class="mobile-text">准看護師として長年勤務。Web・資料制作・AI活用へ。</p>
+            <p class="mobile-page-number">03</p>
+          </div>
+
+          <div class="mobile-page">
+            <p class="mobile-small">04 / MY STYLE</p>
+            <p class="mobile-title">考えて、整えて、確認する。</p>
+            <div class="mobile-step-grid">
+              <p><span>01</span>UNDERSTAND<small>理解する</small></p>
+              <p><span>02</span>ORGANIZE<small>整理する</small></p>
+              <p><span>03</span>CREATE<small>形にする</small></p>
+              <p><span>04</span>CHECK<small>確認する</small></p>
+            </div>
+            <p class="mobile-page-number">04</p>
+          </div>
+
+          <div class="mobile-page">
+            <p class="mobile-small">05 / SELECTED WORKS</p>
+            <div class="mobile-work-list">
+            <p>
+              <img src="img/cafenook.webp" alt="ブックカフェ NOOK. のWebサイト">
+              NOOK.
+            </p>
+
+            <p>
+              <img src="img/hibikieyeclinic.webp" alt="ひびき眼科クリニックのWebサイト">
+              ひびき眼科
+            </p>
+
+            <p>
+              <img src="img/scentory.webp" alt="アロマガイドサイト Scentory">
+              Scentory
+            </p>
+          </div>
+            <p class="mobile-page-number">05</p>
+          </div>
+          <div class="mobile-page">
+            <p class="mobile-small">06 / SKILLS</p>
+            <p class="mobile-title">できること・学んでいること</p>
+            <div class="mobile-skill-grid">
+              <p>WEB<small>HTML / CSS / JavaScript</small></p>
+              <p>DESIGN<small>Adobe / Figma</small></p>
+              <p>OFFICE<small>Excel / PowerPoint</small></p>
+              <p>AI SUPPORT<small>情報・文章・資料整理</small></p>
+            </div>
+            <p class="mobile-page-number">06</p>
+          </div>
+
+          <div class="mobile-page">
+            <p class="mobile-small">07 / EXPERIENCE</p>
+            <p class="mobile-title">実務でしてきたこと</p>
+
+            <div class="mobile-experience-list">
+              <p>
+                <span>01</span>
+                DATA &amp; CHECK
+                <small>データ入力・確認</small>
+              </p>
+
+              <p>
+                <span>02</span>
+                AI SUPPORT
+                <small>生成AIを使った制作・確認</small>
+              </p>
+
+              <p>
+                <span>03</span>
+                OFFICE WORK
+                <small>Excelを使った業務</small>
+              </p>
+            </div>
+
+            <p class="mobile-page-number">07</p>
+          </div>
+
+          <div class="mobile-page">
+            <p class="mobile-small">08 / FUTURE</p>
+            <p class="mobile-title">できることを、<br>少しずつ広げる。</p>
+            <div class="mobile-future">
+              <span>Web制作</span>
+              <span>資料制作</span>
+              <span>AI活用</span>
+              <span>業務支援</span>
+            </div>
+            <p class="mobile-text">これまでの経験と、新しく学んだことを次の仕事へ。</p>
+            <p class="mobile-page-number">08</p>
+          </div>
+
+          <div class="mobile-page mobile-contact-page">
+            <p class="mobile-small">09 / CONTACT</p>
+            <p class="mobile-contact-brand">nook workroom</p>
+            <p class="mobile-title">Thank you<br>for reading.</p>
+            <p class="mobile-text">とみ｜TOMI</p>
+            <p class="mobile-page-number">09</p>
+          </div>
+
+          <div class="mobile-page">
+            <p class="mobile-small">10 / WELCOME</p>
+            <div class="mobile-last-photo">
+              <img src="img/fv2.webp" alt="">
+            </div>
+            
+            <p class="mobile-page-number">10</p>
+          </div>
+
+        </div>
+
+        <div class="mobile-controls">
+          <button type="button" id="mobile-prev-button">戻る</button>
+          <button type="button" id="mobile-play-button">一時停止</button>
+          <button type="button" id="mobile-next-button">次へ</button>
+          <p class="mobile-status" id="mobile-status">1 / 10</p>
+        </div>
+
+      </div>
+    </section>      
+
+    <!-- イントロダクション -->
+    <section class="introduction section-space">
+      <div class="section-inner">
+        <p class="section-number">01 / INTRODUCTION</p>
+
+        <div class="intro-layout">
+        <div class="intro-photo-area">
+          <div class="photo-space photo-intro">
+            <img src="img/about4.webp" alt="パソコンで作業している人物のイラスト">
+          </div>
+        </div>
+          <div class="intro-copy">
+            <p class="lead-text">
+              相手に伝わることを考え、<br>
+              情報を整理し、丁寧に形にする。
+            </p>
+            <p class="body-text intro-text">
+             看護の仕事を通して、正確に確認することや、必要な情報を整理して相手に分かりやすく伝えることを大切にしてきました。
+           </p>
+            <p class="body-text intro-text">
+              これまでにRPAや生成AIなどを学び、現在はWeb制作を中心に学んでいます。<br>仕事で培った経験も生かしながら、できることを少しずつ広げています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 自己紹介 -->
+    <section class="about section-space" id="about">
+      <div class="section-inner two-column">
+        <div class="about-photo">
+          <div class="photo-space photo-portrait">
+            <img src="img/about3.webp" alt="プロフィールイラスト">
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-number">02 / ABOUT ME</p>
+          <h2>経験を、次の仕事へ。</h2>
+          <div class="about-name">
+            <p class="name-ja">とみ</p>
+            <p class="name-en">TOMI</p>
+          </div>
+          <p class="body-text">
+            准看護師として長年、眼科や耳鼻科などの医療現場で働いてきました。<br>
+
+            患者さんへの対応や診療の補助、検査、在庫管理など、間違いがないよう確認しながら進める仕事を多く経験してきました。
+          </p>
+          <p class="body-text">
+            准看護師として働きながら、RPAや生成AIなどを学び始め、現在はWeb制作を中心に学んでいます。<br>
+
+            これまで仕事で身につけてきた正確さや確認する習慣と、新しく学んだことを、これからの仕事にも生かしていきたいと考えています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 仕事の進め方 -->
+    <section class="my-style section-space">
+      <div class="section-inner">
+        <p class="section-number">03 / MY STYLE</p>
+        <h2>考えて、整えて、確認する。</h2>
+
+        <div class="style-list">
+          <div class="style-item">
+            <p class="style-step">01</p>
+            <h3>UNDERSTAND</h3>
+            <p class="style-ja">理解する</p>
+            <p>まず内容を確認し、何を作るのか、何が必要なのかを考えます。</p>
+          </div>
+
+          <div class="style-item">
+            <p class="style-step">02</p>
+            <h3>ORGANIZE</h3>
+            <p class="style-ja">整理する</p>
+            <p>必要な情報を分けて、分かりやすい順番に整理します。</p>
+          </div>
+
+          <div class="style-item">
+            <p class="style-step">03</p>
+            <h3>CREATE</h3>
+            <p class="style-ja">形にする</p>
+            <p>整理した内容をもとに、Webサイトや資料などを作ります。</p>
+          </div>
+
+          <div class="style-item">
+            <p class="style-step">04</p>
+            <h3>CHECK</h3>
+            <p class="style-ja">確認する</p>
+            <p>間違いや分かりにくいところがないか、最後にもう一度確認します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 制作作品 -->
+    <section class="works section-space" id="works">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <p class="section-number">04 / SELECTED WORKS</p>
+            <h2>制作作品</h2>
+          </div>
+          <p class="heading-note">
+            Webデザイナー養成講座で制作した3つのWebサイトと、AI活用事例を紹介します。
+          </p>
+        </div>
+
+        <article class="work-item">
+          <div class="work-image">
+            <div class="photo-space photo-work photo-nook">
+              <!--リンクをつけらるようになれればこの画像にいれる-->
+              <img src="img/cafenook.webp" alt="ブックカフェ NOOK. のwebサイト">
+            </div>
+          </div>
+          <div class="work-text">
+            <p class="work-number">WORK 01</p>
+            <h3>NOOK.</h3>
+            <p class="work-category">BOOK CAFE / WEBSITE</p>
+            <p class="body-text">※架空のブックカフェを想定した学習作品です。</p>
+            <p class="body-text">担当：デザイン・実装。アイデアを整理する際の壁打ちにAIを活用しました。</p>
+            <p class="body-text">
+              本とコーヒーを楽しみながら、ひとりでゆっくり過ごせるブックカフェをイメージして制作しました。<br>
+              30〜50代の女性を想定し、落ち着いた色合いや写真、余白を使って、ゆっくり見られる雰囲気になるよう意識しました。
+            </p>
+            <p class="work-point">POINT：配色・写真・余白をそろえ、サイト全体の雰囲気がまとまるようにしました。</p>
+          </div>
+        </article>
+
+        <article class="work-item work-reverse">
+          <div class="work-image">            
+            <div class="photo-space photo-work photo-hibiki">
+              <!--リンクをつけらるようになれればこの画像にいれる-->
+              <img src="img/hibikieyeclinic.webp" alt="ひびき眼科クリニックのwebサイト">
+            </div>
+          </div>
+          <div class="work-text">
+            <p class="work-number">WORK 02</p>
+            <h3>ひびき眼科クリニック</h3>
+            <p class="work-category">EYE CLINIC / WEBSITE</p>
+            <p class="body-text">※架空の眼科クリニックを想定した学習作品です。</p>
+            <p class="body-text">担当：デザイン・実装。アイデアの壁打ちと画像生成にAIを活用しました。</p>
+            <p class="body-text">
+              地域の患者さんが、受診前に知りたい情報を分かりやすく確認できる眼科クリニックのサイトを制作しました。<br>
+
+              診療内容や初診案内、子どもの受診など、必要な情報を探しやすくし、文字の読みやすさや安心感のある見た目を意識しました。
+            </p>
+            <p class="work-point">POINT：医療現場での経験を生かし、患者さんが「どこを見ればいいか」で迷わないよう、情報の分け方や見せ方を考えました。</p>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-image">
+            <div class="photo-space photo-work photo-scentory">
+              <!--リンクをつけらるようになれればこの画像にいれる-->
+              <img src="img/scentory.webp" alt="アロマガイドサイト Scentory">
+            </div>
+          </div>
+          <div class="work-text">
+            <p class="work-number">WORK 03</p>
+            <h3>Scentory</h3>
+            <p class="work-category">AROMA GUIDE / WEBSITE</p>
+            <p class="body-text">担当：AIの支援を受けながら、デザイン・実装の両方を担当しました。</p>
+            <p class="body-text">
+              「今の気分や過ごしたい時間から、自分に合いそうな精油を探せるサイト」をテーマに制作しました。<br>
+
+              アロマ初心者でも選びやすいように、SCENEから探す方法に加え、気分を入力しておすすめのSCENEや精油を表示する検索機能も作りました。<br>
+
+              スマートフォンでも見やすいように表示を調整し、画像の軽量化やJavaScriptを使った動きなども取り入れています。
+            </p>
+            <p class="work-point">POINT：「精油の名前を知らなくても探せること」を意識し、使う人が選びやすい方法を考えながら改善しました。</p>
+          </div>
+        </article>
+
+                <!-- AIを使った制作・設計 -->
+        <div class="ai-workflow">
+
+          <div class="ai-heading">
+            <p class="work-number">AI SUPPORT / EXPERIMENTS</p>
+            <h3>AIを使った試作・取り組み</h3>
+            <p class="body-text ai-lead">
+              これまでに、情報整理やデザインの言語化などを目的として、対話の流れや出力方法を考えたAIツールを試作しました。ここでは、その中から4つの取り組みを紹介します。
+            </p>
+          </div>
+
+          <div class="ai-grid">
+            <!-- 01 クリニック申し送りBot -->
+            <div class="ai-card">
+              <div class="ai-card-image">
+                <img src="img/clinic_bot_crop.webp" alt="クリニック申し送りBotの動作画面">
+              </div>
+              <p class="ai-number">AI 01</p>
+              <h4>クリニック申し送りBot</h4>
+              <p class="ai-category"> AI × 業務改善 / 医療 </p>
+              <p class="ai-description">
+                自由記述の申し送り内容を整理し、統一フォーマットと台帳転記用CSVへ変換する業務効率化プロトタイプです。
+              </p>
+              <div class="ai-flow">
+                <p>
+                  <span>INPUT</span>
+                  自由記述の申し送り
+                </p>
+                <p>
+                  <span>PROCESS</span>
+                  内容整理・項目分類
+                </p>
+                <p>
+                  <span>OUTPUT</span>
+                  申し送りカード / CSV
+                </p>
+              </div>
+              <p class="ai-point">
+                POINT：入力方法を限定せず、普通の文章から必要な情報を整理できるよう設計しました。
+              </p>
+              <p class="ai-note">
+                ※架空データを使用したプロトタイプです。
+              </p>
+            </div>
+
+            <!-- 02 mimosa -->
+            <div class="ai-card">
+              <div class="ai-card-image">
+                <img src="img/mimosa_crop.webp" alt="mimosaのデザイン提案画面">
+              </div>
+              <p class="ai-number">AI 02</p>
+              <h4>mimosa</h4>
+              <p class="ai-category">
+                AI × DESIGN / HEARING
+              </p>
+              <p class="ai-description">
+                「なんとなくこんな感じが好き」という言葉にしにくい好みを、対話しながら整理するデザインイメージ整理AIです。
+              </p>
+              <div class="ai-flow">
+                <p>
+                  <span>INPUT</span>
+                  色・ターゲット・雰囲気
+                </p>
+                <p>
+                  <span>PROCESS</span>
+                  段階的なヒアリング
+                </p>
+                <p>
+                  <span>OUTPUT</span>
+                  デザイン方向・イメージ提案
+                </p>
+              </div>
+              <p class="ai-point">
+                POINT：一度に多くを聞かず、答えやすい順番で質問しながら好みを言語化します。
+              </p>
+            </div>
+
+            <!-- 03 デザイン言語化トレーナー -->
+            <div class="ai-card">
+              <div class="ai-card-image">
+                <img src="img/design_trainer_crop.webp" alt="デザイン言語化トレーナーの動作画面">
+              </div>
+              <p class="ai-number">AI 03</p>
+              <h4>Design Verbalization Trainer</h4>
+              <p class="ai-category">
+                AI × DESIGN / LEARNING
+              </p>
+              <p class="ai-description">
+                デザインの第一印象から、
+                色・文字・余白・レイアウトなどを分析し、
+                「なぜそう見えるのか」を言葉にする練習を支援します。
+              </p>
+              <div class="ai-flow">
+                <p>
+                  <span>INPUT</span>
+                  デザイン画像・第一印象
+                </p>
+                <p>
+                  <span>PROCESS</span>
+                  質問による段階的な分析
+                </p>
+                <p>
+                  <span>OUTPUT</span>
+                  デザイン分析・改善視点
+                </p>
+              </div>
+              <p class="ai-point">
+                POINT：AIがすぐ答えを出さず、自分で考えながら分析できる質問の流れにしています。
+              </p>
+            </div>
+
+            <!-- 04 シャム猫秘書シアン -->
+            <div class="ai-card">
+              <div class="ai-card-image">
+                <img src="img/cyan_crop.webp" alt="シャム猫秘書シアンのヒアリングと最終出力">
+              </div>
+              <p class="ai-number">AI 04</p>
+              <h4>シャム猫秘書シアン</h4>
+              <p class="ai-category">
+                AI × PERSONALIZE / VERBALIZATION
+              </p>
+              <p class="ai-description">
+                対話しながら経験・価値観・得意なことなどを整理し、AIに自分を理解してもらうための「AI用トリセツ」を作成します。
+              </p>
+              <div class="ai-flow">
+                <p>
+                  <span>INPUT</span>
+                  会話による回答
+                </p>
+                <p>
+                  <span>PROCESS</span>
+                  経験・価値観・希望を整理
+                </p>
+                <p>
+                  <span>OUTPUT</span>
+                  AI用自己紹介・活用指示
+                </p>
+              </div>
+              <p class="ai-point">
+                POINT：1〜2問ずつ質問し、自分のことを説明するのが苦手でも答えやすい流れにしています。
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- スキル -->
+    <section class="skills section-space" id="skills">
+      <div class="section-inner">
+        <p class="section-number">05 / SKILLS</p>
+        <h2>できること・学んでいること</h2>
+
+        <div class="skill-grid">
+          <div class="skill-box">
+            <p class="skill-number">01</p>
+            <h3>WEB</h3>
+            <p>HTML / CSS / JavaScript</p>
+            <p>レスポンシブ対応</p>
+            <p>Webサイト制作</p>
+          </div>
+
+          <div class="skill-box">
+            <p class="skill-number">02</p>
+            <h3>DESIGN</h3>
+            <p>Illustrator / Photoshop：検定認定あり</p>
+            <p>画像作成・編集</p>
+            <p>Figma：授業での基礎学習</p>
+            <p>Premiere Pro：Adobeクリエイティブカレッジ修了</p>
+          </div>
+
+          <div class="skill-box">
+            <p class="skill-number">03</p>
+            <h3>OFFICE</h3>
+            <p>Excel / Word：検定認定あり</p>
+            <p>PowerPoint / Googleスライド：AI出力を活用した資料制作・修正</p>
+            <p>Googleスプレッドシート：既存データの入力・修正</p>
+          </div>
+
+          <div class="skill-box">
+            <p class="skill-number">04</p>
+            <h3>AI SUPPORT</h3>
+            <p>生成AIを使った文章・情報整理</p>
+            <p>資料制作の補助</p>
+            <p>内容確認・修正作業</p>
+          </div>
+        </div>
+
+        <div class="qualifications">
+          <h3>保有資格</h3>
+          <p class="body-text">3級ウェブデザイン技能士</p>
+          <p class="body-text">Webクリエイター能力認定試験 エキスパート（サーティファイ）</p>
+          <p class="body-text">Illustratorクリエイター能力認定試験 スタンダード（サーティファイ）</p>
+          <p class="body-text">Photoshopクリエイター能力認定試験 スタンダード（サーティファイ）</p>
+          <p class="body-text">日商簿記3級</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 実務経験 -->
+    <section class="other-works section-space">
+      <div class="section-inner">
+
+        <p class="section-number">06 / EXPERIENCE</p>
+        <h2>実務でしてきたこと</h2>
+
+        <div class="other-grid">
+
+          <!-- 01 データ入力・確認 -->
+          <div class="other-item experience-item">
+            <p class="work-number">01 / DATA &amp; CHECK</p>
+            <h3>データ入力・確認</h3>
+
+            <p class="body-text">
+              レセプト返戻の再審査に関するデータ入力を経験しました。
+              内容を確認しながら、間違いがないよう正確に入力することを大切にしてきました。
+            </p>
+          </div>
+
+          <!-- 02 生成AIを使った制作・確認 -->
+          <div class="other-item experience-item">
+            <p class="work-number">02 / AI SUPPORT</p>
+            <h3>生成AIを使った制作・確認</h3>
+
+            <p class="body-text">
+              指示されたプロンプトと生成AIを使っての福祉スライド教材の資料制作や、文章・音声の内容確認を経験しました。
+              作成された内容に誤りや不自然なところがないか確認し、必要に応じて修正しました。
+            </p>
+          </div>
+
+          <!-- 03 Excelを使った業務 -->
+          <div class="other-item experience-item">
+            <p class="work-number">03 / OFFICE WORK</p>
+            <h3>Excelを使った業務</h3>
+
+            <p class="body-text">
+              医療現場で在庫管理や棚卸、発注を担当し、
+              Excelを使った在庫表の作成・整理も行いました。
+              日々の業務で使いやすく、確認しやすい形に整えることを意識していました。
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- これから -->
+    <section class="future section-space">
+      <div class="section-inner narrow-inner">
+        <p class="section-number">07 / FUTURE</p>
+        <h2>できることを、少しずつ広げる。</h2>
+        <p class="body-text future-text">
+          Web制作やAIの活用など、これまで学んできたことを実際の仕事につなげながら、少しずつできることを増やしていきたいと考えています。</p>
+        <p class="body-text future-text">
+          これまで仕事で大切にしてきた正確さや確認する習慣を生かしながら、丁寧に取り組める仕事の幅を広げていくことが目標です。
+        </p>
+      </div>
+    </section>
+
+    <!-- 連絡先 -->
+    <section class="contact section-space" id="contact">
+      <div class="section-inner contact-inner">
+        <p class="section-number">08 / CONTACT</p>
+        <p class="contact-brand">nook workroom</p>
+        <h2>Thank you for reading.</h2>
+        <p class="body-text">ご覧いただき、ありがとうございました。</p>
+        <p class="contact-name">とみ｜TOMI</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 nook workroom. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

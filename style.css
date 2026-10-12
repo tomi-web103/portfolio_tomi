@@ -1,0 +1,1975 @@
+@charset "UTF-8";
+
+/* -- 全体の基本設定 -- */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #F4F0E8;
+  color: #2B2926;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+a{
+  color: #2B2926;
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+/* -- 共通パーツ　-- */
+.section-space{
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.section-inner{
+  width: 90%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.narrow-inner{
+  max-width: 820px;
+}
+
+.section-number{
+  margin-bottom: 28px;
+  color: #B97A80;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+}
+
+h2{
+  margin-bottom: 48px;
+  color: #3F4A3C;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+}
+
+.body-text{
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 2.1;
+}
+
+/* 画像が入る場所。あとでdivをimgタグに変更する */
+.photo-space{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #DDD6CC;
+  border: 1px solid #B8AEA1;
+  color: #6E6962;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+}
+
+/* -- ヘッダー -- */
+.header{
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1180px;
+  height: 86px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.logo{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+}
+
+.nav ul{
+  display: flex;
+  gap: 34px;
+}
+
+.nav a{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+}
+
+/* -- ファーストビュー -- */
+.first-view{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 120px 5% 70px;
+  background-color: #D8D0C4;
+  overflow: hidden;
+}
+
+.book-stage{
+  width: 100%;
+  max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto;
+  perspective: 2500px;
+}
+
+.book{
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1080px;
+  min-height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #FBF8F2;
+  box-shadow: 0 24px 55px rgba(73, 58, 47, 0.18);
+  transform: scale(0.97);
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+/* 全ページがめくれたあと、本が少し手前に近づく */
+.book.is-finished{
+  transform: scale(1);
+  box-shadow: 0 30px 65px rgba(73, 58, 47, 0.24);
+}
+
+.book-left,
+.book-right{
+  position: relative;
+  width: 50%;
+  padding: 62px 58px;
+}
+
+.book-left{
+  border-right: 1px solid #CFC5B8;
+}
+
+.small-title{
+  margin-bottom: 28px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+}
+
+.photo-main{
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+}
+
+.photo-main img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.book-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-name{
+  margin-bottom: 44px;
+  color: #5A4338;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  letter-spacing: 0.08em;
+}
+
+.book-right h1{
+  margin-bottom: 38px;
+  color: #3F4A3C;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 34px;
+  font-weight: normal;
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+}
+
+.name-box{
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-top: 1px solid #CFC5B8;
+  border-bottom: 1px solid #CFC5B8;
+}
+
+.name-label{
+  margin-right: 8px;
+  color: #B97A80;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+
+.name-ja{
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 20px;
+  letter-spacing: 0.18em;
+}
+
+.name-en{
+  color: #8D8176;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.first-message{
+  margin-bottom: 34px;
+  color: #5D5852;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.view-link{
+  width: fit-content;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #5A4338;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+}
+
+.page-number{
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  color: #8D8176;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+}
+
+.page-number-right{
+  left: auto;
+  right: 50%;
+}
+
+/* -- 本のページめくり -- */
+/*
+  flip-sheetが「1枚の紙」。
+  page-frontが紙の表、page-backが紙の裏。
+*/
+.flip-sheet{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  transform: rotateY(0deg);
+  transform-origin: left center;
+  transform-style: preserve-3d;
+  transition: transform 1.4s ease-in-out;
+}
+
+/* JavaScriptでis-flippedが付くとページが左へめくれる */
+.flip-sheet.is-flipped{
+  transform: rotateY(-180deg);
+}
+
+.sheet-one{
+  z-index: 5;
+}
+
+.sheet-two{
+  z-index: 4;
+}
+
+.sheet-three{
+  z-index: 3;
+}
+
+.sheet-four{
+  z-index: 2;
+}
+
+.sheet-five{
+  z-index: 1;
+}
+
+.page-face{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 56px 52px;
+  background-color: #FBF8F2;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.page-front{
+  border-left: 1px solid #CFC5B8;
+  box-shadow: inset 16px 0 25px rgba(73, 58, 47, 0.06);
+}
+
+.page-back{
+  border-right: 1px solid #CFC5B8;
+  box-shadow: inset -16px 0 25px rgba(73, 58, 47, 0.06);
+  transform: rotateY(180deg);
+}
+
+.flip-small{
+  margin-bottom: 34px;
+  color: #B97A80;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+}
+
+.flip-title{
+  margin-bottom: 38px;
+  color: #3F4A3C;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 24px;
+  line-height: 1.75;
+  letter-spacing: 0.04em;
+}
+
+.mini-heading{
+  font-size: 20px;
+}
+
+.flip-text{
+  color: #5D5852;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.flip-page-number{
+  position: absolute;
+  right: 50%;
+  bottom: 24px;
+  color: #8D8176;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+}
+
+.page-front .flip-page-number{
+  right: auto;
+  left: 50%;
+}
+
+/* 表紙 */
+.cover-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #3F4A3C;
+  color: #FBF8F2;
+}
+
+.cover-page .flip-small{
+  color: #D5B1B4;
+}
+
+.cover-brand{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  line-height: 1.12;
+  letter-spacing: 0.03em;
+}
+
+.cover-line{
+  width: 70px;
+  height: 1px;
+  margin-top: 38px;
+  margin-bottom: 28px;
+  background-color: #D5B1B4;
+}
+
+.cover-name{
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 15px;
+  letter-spacing: 0.15em;
+}
+
+.cover-page .flip-page-number{
+  color: #D7D8D0;
+}
+
+/* ABOUTのミニレイアウト */
+.mini-about{
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-top: 28px;
+  margin-bottom: 38px;
+}
+
+.mini-photo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42%;
+  height: 220px;
+  background-color: #DDD6CC;
+  border: 1px solid #B8AEA1;
+  color: #6E6962;
+  font-size: 12px;
+}
+
+.mini-about-text{
+  width: 50%;
+  color: #5D5852;
+  font-size: 12px;
+  line-height: 2.1;
+}
+
+.mini-name{
+  margin-bottom: 18px;
+  color: #3F4A3C;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 18px;
+}
+
+/* MY STYLEの4項目 */
+.mini-step-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid #B8AEA1;
+  border-left: 1px solid #B8AEA1;
+}
+
+.mini-step-grid p{
+  padding: 22px 18px;
+  border-right: 1px solid #B8AEA1;
+  border-bottom: 1px solid #B8AEA1;
+  color: #3F4A3C;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.mini-step-grid span{
+  display: block;
+  margin-bottom: 12px;
+  color: #B97A80;
+  font-size: 10px;
+}
+
+.mini-step-grid small{
+  display: block;
+  margin-top: 6px;
+  color: #6E6962;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 10px;
+}
+
+/* SKILLSの4項目 */
+.mini-skill-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.mini-skill-grid p{
+  min-height: 115px;
+  padding: 24px 18px;
+  background-color: #E8E2D9;
+  color: #3F4A3C;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+}
+
+.mini-skill-grid small{
+  display: block;
+  margin-top: 12px;
+  color: #6E6962;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* WORKSの3作品 */
+.mini-work-grid{
+  display: grid;
+  gap: 20px;
+}
+
+.mini-work-grid div{
+  display: grid;
+  grid-template-columns: 48% 1fr;
+  align-items: center;
+  gap: 22px;
+}
+
+.mini-work-grid img{
+  width: 100%;
+  height: 118px;
+  object-fit: cover;
+  object-position: center top;  
+  border: 1px solid #CFC5B8;
+  display: block;
+}
+
+.mini-work-grid p{
+  color: #3F4A3C;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* OTHER WORKSの3項目 */
+.mini-other-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.mini-other-grid p{
+  color: #3F4A3C;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.mini-other-grid span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  margin-bottom: 14px;
+  background-color: #DDD6CC;
+  border: 1px solid #B8AEA1;
+  color: #6E6962;
+}
+
+/* FUTUREの流れ */
+.mini-future-flow{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.mini-future-flow span{
+  padding: 9px 14px;
+  background-color: #E8E2D9;
+  color: #3F4A3C;
+  font-size: 11px;
+}
+
+/* CONTACT */
+.contact-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #5A4338;
+  color: #FBF8F2;
+}
+
+.contact-page .flip-small{
+  color: #D5B1B4;
+}
+
+.contact-page .flip-title,
+.contact-page .flip-text{
+  color: #FBF8F2;
+}
+
+.contact-book-brand{
+  margin-bottom: 34px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+}
+
+.contact-page .flip-page-number{
+  color: #D7D8D0;
+}
+
+/* 最後の写真ページ */
+.last-photo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 335px;
+  overflow: hidden;
+  background-color: #DDD6CC;
+  border: 1px solid #B8AEA1;
+  color: #6E6962;
+  font-size: 12px;
+}
+
+.last-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.last-message{
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* ページ操作ボタン */
+.book-controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.book-controls button{
+  min-width: 90px;
+  padding: 10px 16px;
+  background-color: transparent;
+  border: 1px solid #5A4338;
+  color: #3F342E;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.book-controls button:hover,
+.book-controls button:focus{
+  background-color: #5A4338;
+  color: #FBF8F2;
+}
+
+.book-controls button:disabled{
+  border-color: #AFA69C;
+  color: #8D8176;
+  cursor: default;
+  opacity: 0.6;
+}
+
+.book-status{
+  min-width: 48px;
+  color: #5A4338;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* -- イントロダクション -- */
+.introduction{
+  background-color: #F4F0E8;
+  text-align: center;
+}
+
+.lead-text{
+  margin-bottom: 42px;
+  color: #3F4A3C;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 27px;
+  line-height: 1.9;
+  letter-spacing: 0.07em;
+}
+
+.intro-text{
+  max-width: 670px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/* INTRODUCTIONの写真と文章 */
+.intro-layout{
+  display: flex;
+  align-items: center;
+  gap: 9%;
+}
+
+.intro-photo-area{
+  width: 43%;
+}
+
+.intro-copy{
+  width: 48%;
+  text-align: left;
+}
+
+.photo-intro{
+  width: 100%;
+  height: 380px;
+}
+
+.intro-text{
+  max-width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* -- 自己紹介 -- */
+.about{
+  background-color: #FBF8F2;
+}
+
+.two-column{
+  display: flex;
+  align-items: center;
+  gap: 9%;
+}
+
+.about-photo{
+  width: 43%;
+}
+
+.about-text{
+  width: 48%;
+}
+
+.photo-portrait{
+  width: 100%;
+  height: 570px;
+}
+.photo-portrait img,
+.mini-photo img,
+.mobile-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.photo-intro img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+.about-name{
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 36px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #CFC5B8;
+}
+
+/* -- 仕事の進め方 -- */
+.my-style{
+  background-color: #3F4A3C;
+  color: #FBF8F2;
+}
+
+.my-style h2{
+  color: #FBF8F2;
+}
+
+.style-list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.style-item{
+  min-height: 300px;
+  padding: 38px 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.style-item:last-child{
+  border-right: none;
+}
+
+.style-step{
+  margin-bottom: 42px;
+  color: #D5B1B4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+}
+
+.style-item h3{
+  margin-bottom: 4px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+}
+
+.style-ja{
+  margin-bottom: 26px;
+  color: #D7D8D0;
+  font-size: 13px;
+}
+
+.style-item > p:last-child{
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* -- 制作作品 -- */
+.works{
+  background-color: #F4F0E8;
+}
+
+.section-heading{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.section-heading h2{
+  margin-bottom: 0;
+}
+
+.heading-note{
+  color: #6E6962;
+  font-size: 14px;
+}
+
+.work-item{
+  display: flex;
+  align-items: center;
+  gap: 9%;
+  margin-bottom: 170px;
+}
+
+.work-item:last-child{
+  margin-bottom: 0;
+}
+
+.work-reverse{
+  flex-direction: row-reverse;
+}
+
+.work-image{
+  width: 58%;
+}
+
+.work-text{
+  width: 34%;
+}
+
+.photo-work{
+  width: 100%;
+  height: 410px;
+  border: none;
+  overflow: hidden;
+}
+.photo-work img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* NOOK.：下のメニューを中途半端に見せない */
+.photo-nook img{
+  object-position: center top;
+}
+
+/* ひびき眼科：上のヘッダー部分をしっかり見せる */
+.photo-hibiki img{
+  object-position: center top;
+}
+
+.photo-scentory{
+  background-color: #C9CDBF;
+}
+
+.work-number{
+  margin-bottom: 26px;
+  color: #B97A80;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+
+.work-text h3{
+  margin-bottom: 10px;
+  color: #3F4A3C;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.work-category{
+  margin-bottom: 32px;
+  color: #8D8176;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+  letter-spacing: 0.13em;
+}
+
+.work-point{
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid #CFC5B8;
+  color: #5A4338;
+  font-size: 13px;
+}
+
+/* -- AI WORKFLOW -- */
+/* Web作品3つの下に置くAI制作ブロック */
+.ai-workflow{
+  margin-top: 170px;
+  padding-top: 90px;
+  border-top: 1px solid #CFC5B8;
+}
+
+/* AIブロック上部の説明 */
+.ai-heading{
+  max-width: 760px;
+  margin-bottom: 70px;
+}
+
+.ai-heading h3{
+  margin-bottom: 28px;
+  color: #3F4A3C;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+}
+
+.ai-lead{
+  margin-bottom: 0;
+  color: #5D5852;
+}
+
+/* 4作品をPCでは2列に並べる */
+.ai-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+}
+
+/* 1作品分のカード */
+.ai-card{
+  padding: 28px;
+  background-color: #FBF8F2;
+  border: 1px solid #CFC5B8;
+}
+
+/* あとでスクリーンショットを入れる場所 */
+.ai-card-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 240px;
+
+  margin-bottom: 28px;
+
+  background-color: #E8E2D9;
+  border: 1px solid #CFC5B8;
+
+  color: #8D8176;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  overflow: hidden;
+}
+.ai-card-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* AI 01などの番号 */
+.ai-number{
+  margin-bottom: 10px;
+
+  color: #B97A80;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+
+/* AI作品名 */
+.ai-card h4{
+  margin-bottom: 8px;
+
+  color: #3F4A3C;
+
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+/* AI × DESIGNなどのジャンル */
+.ai-category{
+  margin-bottom: 24px;
+
+  color: #8D8176;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+/* AI作品の説明 */
+.ai-description{
+  margin-bottom: 26px;
+
+  color: #5D5852;
+
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* INPUT / PROCESS / OUTPUT */
+.ai-flow{
+  margin-bottom: 26px;
+  border-top: 1px solid #CFC5B8;
+}
+
+.ai-flow p{
+  display: grid;
+  grid-template-columns: 90px 1fr;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #CFC5B8;
+
+  color: #5D5852;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.ai-flow span{
+  color: #B97A80;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+/* 各作品の工夫したところ */
+.ai-point{
+  color: #5A4338;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* クリニックBotの注意書き */
+.ai-note{
+  margin-top: 16px;
+
+  color: #8D8176;
+
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* -- スキル -- */
+.skills{
+  background-color: #E8E2D9;
+}
+
+.skill-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background-color: #B8AEA1;
+  border: 1px solid #B8AEA1;
+}
+
+.skill-box{
+  min-height: 240px;
+  padding: 42px;
+  background-color: #F4F0E8;
+}
+
+.skill-number{
+  margin-bottom: 26px;
+  color: #B97A80;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+}
+
+.skill-box h3{
+  margin-bottom: 22px;
+  color: #3F4A3C;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+}
+
+.skill-box p{
+  font-size: 14px;
+}
+
+/* -- Web以外の制作 -- */
+.other-works{
+  background-color: #FBF8F2;
+}
+
+.other-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+.photo-other{
+  height: 260px;
+  margin-bottom: 24px;
+}
+
+.other-item h3{
+  color: #3F4A3C;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* EXPERIENCEのカード */
+.experience-item{
+  padding: 32px 24px;
+  border: 1px solid #CFC5B8;
+  background-color: #FBF8F2;
+}
+
+/* EXPERIENCE内の見出し */
+.experience-item h3{
+  margin-bottom: 24px;
+  color: #3F4A3C;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+/* EXPERIENCE内の本文 */
+.experience-item .body-text{
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 2;
+}
+
+/* EXPERIENCEのミニ表示 */
+.mini-experience-grid{
+  display: grid;
+  gap: 14px;
+}
+
+.mini-experience-grid p{
+  padding: 18px 20px;
+  background-color: #E8E2D9;
+  color: #3F4A3C;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+}
+
+.mini-experience-grid span{
+  margin-right: 12px;
+  color: #B97A80;
+  font-size: 10px;
+}
+
+.mini-experience-grid small{
+  display: block;
+  margin-top: 6px;
+  color: #6E6962;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 10px;
+}
+/* -- これから -- */
+.future{
+  background-color: #F4F0E8;
+  text-align: center;
+}
+
+.future-text{
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* -- 連絡先 -- */
+.contact{
+  background-color: #5A4338;
+  color: #FBF8F2;
+  text-align: center;
+}
+
+.contact h2{
+  margin-bottom: 28px;
+  color: #FBF8F2;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+}
+
+.contact-brand{
+  margin-bottom: 38px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
+
+.contact-space{
+  width: 280px;
+  margin: 46px auto 30px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.contact-name{
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  letter-spacing: 0.12em;
+}
+
+.footer{
+  padding: 24px 5%;
+  background-color: #352A25;
+  color: #CFC5B8;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+/* -- スマホ専用のレポート用紙 -- */
+.mobile-book-stage{
+  display: none;
+}
+
+/* -- タブレット -- */
+@media screen and (max-width: 900px){
+  .section-space{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .nav ul{
+    gap: 20px;
+  }
+
+  .book{
+    min-height: 540px;
+  }
+
+  .book-left,
+  .book-right{
+    padding: 48px 38px;
+  }
+
+  .photo-main{
+    height: 340px;
+  }
+
+  .book-right h1{
+    font-size: 30px;
+  }
+
+  .page-face{
+    padding: 44px 34px;
+  }
+
+  .cover-brand{
+    font-size: 40px;
+  }
+
+  .flip-title{
+    font-size: 21px;
+  }
+
+  .mini-heading{
+    font-size: 19px;
+  }
+
+  .mini-photo{
+    height: 190px;
+  }
+
+  .mini-other-grid span{
+    height: 155px;
+  }
+
+  .last-photo{
+    height: 290px;
+  }
+  
+  .style-list{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .style-item:nth-child(2){
+    border-right: none;
+  }
+
+  .style-item:nth-child(1),
+  .style-item:nth-child(2){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .work-item,
+  .work-reverse{
+    gap: 5%;
+  }
+
+  .work-image{
+    width: 55%;
+  }
+
+  .work-text{
+    width: 40%;
+  }
+
+  .photo-work{
+    height: 330px;
+  }
+}
+
+/* -- スマートフォン -- */
+@media screen and (max-width: 600px){
+  body{
+    font-size: 15px;
+  }
+
+  .section-space{
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
+  .section-inner{
+    width: 88%;
+  }
+
+  h2{
+    margin-bottom: 34px;
+    font-size: 26px;
+  }
+
+  .body-text{
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .header-inner{
+    height: 70px;
+  }
+
+  .logo{
+    font-size: 16px;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  /* PC用の見開き本はスマホでは非表示 */
+  .desktop-book-stage{
+    display: none;
+  }
+
+  /* スマホのファーストビュー */
+  .first-view{
+    display: block;
+    height: 650px;
+    min-height: 650px;
+    padding: 70px 4% 10px;
+  }
+
+  /* スマホ専用のレポート用紙全体 */
+  .mobile-book-stage{
+    display: block;
+    width: 100%;
+    max-width: 390px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* レポート用紙 */
+  .mobile-paper{
+    position: relative;
+    width: 100%;
+    height: 510px;
+    background-color: #FBF8F2;
+    box-shadow: 0 18px 40px rgba(73, 58, 47, 0.18);
+    perspective: 1800px;
+  }
+
+  /* 1ページ分 */
+  .mobile-page{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 510px;
+    padding: 30px 26px 38px;
+
+    background-color: #FBF8F2;
+    border-top: 4px solid #B97A80;
+
+    transform: rotateX(0deg);
+    transform-origin: center top;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+    transition: transform 1.2s ease-in-out;
+
+    overflow: hidden;
+  }
+
+  /* めくったページ */
+  .mobile-page.is-turned{
+    transform: rotateX(180deg);
+  }
+
+  /* ページ上部の小さい文字 */
+  .mobile-small{
+    margin-bottom: 24px;
+
+    color: #B97A80;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+
+  /* ページ内の見出し */
+  .mobile-title{
+    margin-bottom: 26px;
+
+    color: #3F4A3C;
+
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 21px;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+  }
+
+  /* ページ内の文章 */
+  .mobile-text{
+    color: #5D5852;
+
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  /* ページ番号 */
+  .mobile-page-number{
+    position: absolute;
+    right: 24px;
+    bottom: 18px;
+
+    color: #8D8176;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10px;
+  }
+
+  /* -- 01 COVER -- */
+  .mobile-page:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #3F4A3C;
+    color: #FBF8F2;
+  }
+
+  .mobile-page:first-child .mobile-small{
+    color: #D5B1B4;
+  }
+
+  .mobile-page:first-child .mobile-page-number{
+    color: #D7D8D0;
+  }
+
+  .mobile-cover-brand{
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    line-height: 1.12;
+  }
+
+  .mobile-cover-line{
+    width: 62px;
+    height: 1px;
+
+    margin-top: 30px;
+    margin-bottom: 24px;
+
+    background-color: #D5B1B4;
+  }
+
+  .mobile-cover-name{
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+  }
+
+  /* -- ABOUT -- */
+  .mobile-photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58%;
+    height: 230px;
+
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+
+    background-color: #DDD6CC;
+    border: 1px solid #B8AEA1;
+
+    color: #6E6962;
+    font-size: 11px;
+  }
+
+  .mobile-name{
+    margin-bottom: 10px;
+
+    color: #3F4A3C;
+
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  /* -- MY STYLE -- */
+  .mobile-step-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    border-top: 1px solid #B8AEA1;
+    border-left: 1px solid #B8AEA1;
+  }
+
+  .mobile-step-grid p{
+    padding: 17px 12px;
+
+    border-right: 1px solid #B8AEA1;
+    border-bottom: 1px solid #B8AEA1;
+
+    color: #3F4A3C;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10px;
+  }
+
+  .mobile-step-grid span,
+  .mobile-step-grid small{
+    display: block;
+  }
+
+  .mobile-step-grid span{
+    margin-bottom: 8px;
+    color: #B97A80;
+  }
+
+  .mobile-step-grid small{
+    margin-top: 5px;
+
+    color: #6E6962;
+
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 9px;
+  }
+
+  /* -- SKILLS -- */
+  .mobile-skill-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .mobile-skill-grid p{
+    min-height: 112px;
+    padding: 18px 12px;
+
+    background-color: #E8E2D9;
+    color: #3F4A3C;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11px;
+  }
+
+  .mobile-skill-grid small{
+    display: block;
+
+    margin-top: 8px;
+
+    color: #6E6962;
+
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  /* -- WORKS -- */
+  .mobile-work-list{
+    display: grid;
+    gap: 30px;
+  }
+
+  .mobile-work-list p{
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    align-items: center;
+    gap: 14px;
+
+    color: #3F4A3C;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+  }
+
+  .mobile-work-list img{
+  width: 100%;
+  height: 92px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* EXPERIENCE */
+.mobile-experience-list{
+  display: grid;
+  gap: 12px;
+}
+
+.mobile-experience-list p{
+  padding: 16px;
+  background-color: #E8E2D9;
+  color: #3F4A3C;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+}
+
+.mobile-experience-list span{
+  margin-right: 10px;
+  color: #B97A80;
+  font-size: 9px;
+}
+
+.mobile-experience-list small{
+  display: block;
+  margin-top: 5px;
+  color: #6E6962;
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 9px;
+}
+  /* -- FUTURE -- */
+  .mobile-future{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 26px;
+  }
+
+  .mobile-future span{
+    padding: 8px 11px;
+
+    background-color: #E8E2D9;
+    color: #3F4A3C;
+
+    font-size: 10px;
+  }
+
+  /* -- CONTACT -- */
+  .mobile-contact-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #5A4338;
+    color: #FBF8F2;
+  }
+
+  .mobile-contact-page .mobile-small,
+  .mobile-contact-page .mobile-title,
+  .mobile-contact-page .mobile-text{
+    color: #FBF8F2;
+  }
+
+  .mobile-contact-page .mobile-page-number{
+    color: #D7D8D0;
+  }
+
+  .mobile-contact-brand{
+    margin-bottom: 28px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+  }
+
+  /* -- 最後のページ -- */
+  .mobile-last-photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 320px;
+    overflow: hidden;
+
+    background-color: #DDD6CC;
+    border: 1px solid #B8AEA1;
+
+    color: #6E6962;
+    font-size: 11px;
+  }
+  .mobile-last-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+
+  .mobile-last-message{
+    margin-top: 18px;
+    text-align: center;
+  }
+
+  /* -- 操作ボタン -- */
+  .mobile-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    height: 54px;
+    margin-top: 6px;
+  }
+
+  .mobile-controls button{
+    min-width: 62px;
+    padding: 8px 9px;
+
+    background-color: transparent;
+    border: 1px solid #5A4338;
+
+    color: #3F342E;
+    font-size: 11px;
+
+    cursor: pointer;
+  }
+
+  .mobile-controls button:disabled{
+    border-color: #AFA69C;
+    color: #8D8176;
+
+    opacity: 0.6;
+  }
+
+  .mobile-status{
+    min-width: 42px;
+
+    color: #5A4338;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11px;
+    text-align: center;
+  } 
+
+  .lead-text{
+    margin-bottom: 32px;
+    font-size: 23px;
+    line-height: 1.8;
+  }
+
+  .intro-layout{
+    display: block;
+  }
+
+  .intro-photo-area,
+  .intro-copy{
+    width: 100%;
+  }
+
+  .intro-photo-area{
+    margin-bottom: 42px;
+  }
+
+  .photo-intro{
+    height: 280px;
+  }
+
+  .two-column{
+    display: block;
+  }
+
+  .about-photo,
+  .about-text{
+    width: 100%;
+  }
+
+  .about-photo{
+    margin-bottom: 54px;
+  }
+
+  .photo-portrait{
+    height: 420px;
+  }
+
+  .style-list{
+    display: block;
+  }
+
+  .style-item{
+    min-height: auto;
+    padding: 34px 20px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .style-item:last-child{
+    border-bottom: none;
+  }
+
+  .style-step{
+    margin-bottom: 22px;
+  }
+
+  .section-heading{
+    display: block;
+    margin-bottom: 58px;
+  }
+
+  .section-heading h2{
+    margin-bottom: 20px;
+  }
+
+  .work-item,
+  .work-reverse{
+    display: block;
+    margin-bottom: 100px;
+  }
+
+  .work-image,
+  .work-text{
+    width: 100%;
+  }
+
+  .work-image{
+    margin-bottom: 36px;
+  }
+
+  .photo-work{
+    height: 250px;
+  }
+
+  .work-text h3{
+    font-size: 24px;
+  }
+    /* -- AI WORKFLOW スマホ -- */
+
+  .ai-workflow{
+    margin-top: 100px;
+    padding-top: 70px;
+  }
+
+  .ai-heading{
+    margin-bottom: 48px;
+  }
+
+  .ai-heading h3{
+    font-size: 24px;
+  }
+
+  /* スマホでは1列 */
+  .ai-grid{
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .ai-card{
+    padding: 22px;
+  }
+
+  .ai-card-image{
+    height: 200px;
+  }
+
+  .ai-card h4{
+    font-size: 20px;
+  }
+
+  .ai-description{
+    font-size: 13px;
+  }
+
+  .ai-flow p{
+    grid-template-columns: 78px 1fr;
+    font-size: 11px;
+  }
+
+  .skill-grid{
+    display: block;
+    border: none;
+  }
+
+  .skill-box{
+    min-height: auto;
+    padding: 34px 28px;
+    border-bottom: 1px solid #B8AEA1;
+  }
+
+  .other-grid{
+    display: block;
+  }
+
+  .other-item{
+    margin-bottom: 54px;
+  }
+
+  .other-item:last-child{
+    margin-bottom: 0;
+  }
+
+  .photo-other{
+    height: 230px;
+  }
+
+  .contact h2{
+    font-size: 28px;
+  }
+}
+
+/* 動きを減らす設定の端末では、めくる時間を短くする */
+@media (prefers-reduced-motion: reduce){
+  .flip-sheet,
+  .book{
+    transition-duration: 0.01s;
+  }
+}
